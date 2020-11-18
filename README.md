@@ -96,14 +96,13 @@ Metricbeat - monitors the performance on the machines being monitored.
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the filebeat config file to ansible directory.
+- Update the hosts file to include...
+- Run the playbook, and navigate to the Filebeat installation to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? myplaybook.yml, filebeat-playbook.yml, metricbeat-playbook.yml Where do you copy it? /etc/ansible/ inside the Ansible Docker Container
-- _Which file do you update to make Ansible run the playbook on a specific machine? Hosts File How do I specify which machine to install the ELK server on versus which to install Filebeat on? You modify the Filebeat-config.yml and the metricbeat-config.yml with the machine ip address as well as the address for the Elk server. Also you in both (Filebeat and Metricbeat) you place the name of the Elk server as the host.
-- _Which URL do you navigate to in order to check that the ELK server is running? http://52.250.18.159:5601/app/kibana#/discover?_g=(refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(columns:!(_source),index:'filebeat-*',interval:auto,query:(language:kuery,query:''),sort:!(!('@timestamp',desc)))
+- Which file is the playbook? myplaybook.yml, filebeat-playbook.yml, metricbeat-playbook.yml Where do you copy it? /etc/ansible/ inside the Ansible Docker Container
+- Which file do you update to make Ansible run the playbook on a specific machine? Hosts File How do I specify which machine to install the ELK server on versus which to install Filebeat on? You modify the Filebeat-config.yml and the   metricbeat-config.yml with the machine ip address as well as the address for the Elk server. Also in both (Filebeat and Metricbeat) you place the name of the Elk server as the host.
+- Which URL do you navigate to in order to check that the ELK server is running? http://137.116.52.192:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
 -sudo docker container list -a
